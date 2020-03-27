@@ -4,3 +4,4 @@ travis:
 
 provider:
   osx: travis
+  linux: azure
