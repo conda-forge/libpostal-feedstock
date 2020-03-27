@@ -9,7 +9,7 @@ source:
   git_tag: v1.1-alpha-31-g790e24bc
 
 build:
-  number: 0
+  number: 1
   skip: True  # [win]
 
 requirements:
