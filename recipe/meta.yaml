@@ -26,12 +26,12 @@ requirements:
 test:
   commands:
     - test -d ${PREFIX}/share/libpostal_data
-    - test -d ${PREFIX}/share/address_expansions
-    - test -d ${PREFIX}/share/address_parser
-    - test -d ${PREFIX}/share/transliteration
-    - test -f ${PREFIX}/share/transliteration/transliteration.dat
-    - test -f ${PREFIX}/share/address_parser/address_parser_crf.dat
-    - test -f ${PREFIX}/share/address_expansions/address_dictionary.dat
+    - test -d ${PREFIX}/share/libpostal_data/libpostal/address_expansions
+    - test -d ${PREFIX}/share/libpostal_data/libpostal/address_parser
+    - test -d ${PREFIX}/share/libpostal_data/libpostal/transliteration
+    - test -f ${PREFIX}/share/libpostal_data/libpostal/transliteration/transliteration.dat
+    - test -f ${PREFIX}/share/libpostal_data/libpostal/address_parser/address_parser_crf.dat
+    - test -f ${PREFIX}/share/libpostal_data/libpostal/address_expansions/address_dictionary.dat
     - test -f ${PREFIX}/bin/libpostal_data
     - test -f $PREFIX/lib/libpostal${SHLIB_EXT}
 
