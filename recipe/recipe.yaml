@@ -9,7 +9,7 @@ package:
 
 source:
   url: https://github.com/openvenues/libpostal/archive/refs/tags/v1.1.tar.gz
-  sha256: a93ae1130b102c61c8f55433bdd55bcd6ddb617102c1ee7aee767b86eef1e176
+  sha256: 8cc473a05126895f183f2578ca234428d8b58ab6fadf550deaacd3bd0ae46032
 
 build:
   number: 4
