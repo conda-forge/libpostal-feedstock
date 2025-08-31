@@ -3,3 +3,6 @@
 
 make -j${CPU_COUNT}
 make install
+
+# Used for testing
+libtool --mode install install src/address_parser $PREFIX/bin

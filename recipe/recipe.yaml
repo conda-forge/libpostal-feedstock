@@ -43,6 +43,7 @@ tests:
       - test -f ${PREFIX}/share/libpostal_data/libpostal/address_expansions/address_dictionary.dat
       - test -f ${PREFIX}/bin/libpostal_data
       - test -f $PREFIX/lib/libpostal${SHLIB_EXT}
+  - script: test.sh
 
 about:
   license: MIT
