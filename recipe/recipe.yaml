@@ -17,6 +17,7 @@ build:
   script:
     file: build.sh
     env:
+      CFLAGS: "-Wno-incompatible-pointer-types" # https://github.com/openvenues/libpostal/issues/677
       SSE_FLAG: ${{ "--disable-sse2" if osx and arm64 else "" }} # https://github.com/openvenues/libpostal/pull/679
 
 requirements:
