@@ -1,0 +1,55 @@
+schema_version: 1
+
+context:
+  version: 1.1.0
+
+package:
+  name: libpostal
+  version: ${{ version }}
+
+source:
+  url: https://github.com/openvenues/libpostal/archive/refs/tags/v1.1.tar.gz
+  sha256: a93ae1130b102c61c8f55433bdd55bcd6ddb617102c1ee7aee767b86eef1e176
+
+build:
+  number: 4
+  skip: win
+  script:
+    file: build.sh
+    env:
+      SSE_FLAG: ${{ "--disable-sse2" if osx and arm64 else "" }} # https://github.com/openvenues/libpostal/pull/679
+
+requirements:
+  build:
+    - ${{ compiler('c') }}
+    - ${{ stdlib('c') }}
+    - autoconf
+    - automake
+    - curl
+    - libtool
+    - make
+  run:
+    - curl
+
+tests:
+  - script:
+      - test -d ${PREFIX}/share/libpostal_data
+      - test -d ${PREFIX}/share/libpostal_data/libpostal/address_expansions
+      - test -d ${PREFIX}/share/libpostal_data/libpostal/address_parser
+      - test -d ${PREFIX}/share/libpostal_data/libpostal/transliteration
+      - test -f ${PREFIX}/share/libpostal_data/libpostal/transliteration/transliteration.dat
+      - test -f ${PREFIX}/share/libpostal_data/libpostal/address_parser/address_parser_crf.dat
+      - test -f ${PREFIX}/share/libpostal_data/libpostal/address_expansions/address_dictionary.dat
+      - test -f ${PREFIX}/bin/libpostal_data
+      - test -f $PREFIX/lib/libpostal${SHLIB_EXT}
+
+about:
+  license: MIT
+  license_file: LICENSE
+  summary: C library for parsing/normalizing street addresses around the world.
+  homepage: https://github.com/openvenues/libpostal
+
+extra:
+  recipe-maintainers:
+    - MichaelMarien
+    - tdsmith
