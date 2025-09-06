@@ -177,4 +177,5 @@ Feedstock Maintainers
 =====================
 
 * [@MichaelMarien](https://github.com/MichaelMarien/)
+* [@tdsmith](https://github.com/tdsmith/)
 
