@@ -1,7 +1,7 @@
 schema_version: 1
 
 context:
-  version: 1.1.0
+  version: "1.1.3"
 
 package:
   name: libpostal
@@ -12,7 +12,7 @@ source:
   sha256: 8cc473a05126895f183f2578ca234428d8b58ab6fadf550deaacd3bd0ae46032
 
 build:
-  number: 4
+  number: 0
   skip: win
   script:
     file: build.sh
