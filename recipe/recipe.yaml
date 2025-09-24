@@ -12,13 +12,10 @@ source:
   sha256: 8cc473a05126895f183f2578ca234428d8b58ab6fadf550deaacd3bd0ae46032
 
 build:
-  number: 0
+  number: 1
   skip: win
   script:
     file: build.sh
-    env:
-      CFLAGS: "-Wno-incompatible-pointer-types" # https://github.com/openvenues/libpostal/issues/677
-      SSE_FLAG: ${{ "--disable-sse2" if osx and arm64 else "" }} # https://github.com/openvenues/libpostal/pull/679
 
 requirements:
   build:
