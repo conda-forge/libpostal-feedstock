@@ -1,7 +1,7 @@
 schema_version: 1
 
 context:
-  version: "1.1.3"
+  version: "1.1.4"
 
 package:
   name: libpostal
@@ -9,10 +9,10 @@ package:
 
 source:
   url: https://github.com/openvenues/libpostal/archive/refs/tags/v${{ version }}.tar.gz
-  sha256: 02883c2f62658a09f9e49819f7983c7b19a574f9422424ecd5e4ff43cf7830a8
+  sha256: 41ad2cd20261e6498f1843c8d21cd737470d17e975deb6ea2a5d1517880729d3
 
 build:
-  number: 1
+  number: 0
   skip: win
   script:
     file: build.sh
